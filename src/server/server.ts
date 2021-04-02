@@ -2,7 +2,7 @@ import bodyParser from 'body-parser';
 import compression from 'compression';
 import express from 'express';
 import helmet from 'helmet';
-import Enviroment from '../environment/environment';
+import Enviroment from '../config/index';
 
 export default class Server {
   private static _instance: Server;
@@ -16,8 +16,8 @@ export default class Server {
 
   private configServer(): void {
     this.app.use(compression());
-    this.app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
-    this.app.use(bodyParser.json({ limit: '50mb' }));
+    this.app.use(bodyParser.urlencoded({ extended: true }));
+    this.app.use(bodyParser.json());
     this.app.use(helmet());
   }
 

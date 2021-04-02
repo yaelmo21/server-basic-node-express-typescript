@@ -1,4 +1,5 @@
 import Server from './server/server';
+import Routes from './api/index';
 import Colors = require('colors.ts');
 const server = Server.instance;
 
@@ -9,7 +10,5 @@ Colors.theme({
   warning: "yellow",
   debug: "blue",
 });
-
-server.start(() => {
-  console.log("Server listening on port: " + `${server.port}`.debug);
-});
+server.app.use('/', Routes);
+server.start(() => console.log("Server listening on port: " + `${server.port}`.debug));

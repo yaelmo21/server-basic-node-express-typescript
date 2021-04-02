@@ -10,5 +10,11 @@
 
 This server use the pattern Singleton
 
-by:  [Yaelmo21](https://github.com/yaelmo21) :octocat:
+## Test  
 
+| Request methods | Url | Response |
+| --- | --- | --- |
+| get | localhost:[port]| application/json |
+| get | localhost:[port]/html| text/html |
+
+by:  [Yaelmo21](https://github.com/yaelmo21) :octocat:
