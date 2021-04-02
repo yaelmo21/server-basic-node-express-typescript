@@ -1,6 +1,6 @@
 {
     "name": "server-basic-node-express-ts",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Server basic node and typescript",
     "main": "index.js",
     "scripts": {
